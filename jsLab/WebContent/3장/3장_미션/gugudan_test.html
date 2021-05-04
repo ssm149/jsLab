@@ -2,18 +2,43 @@
 <head>
 <title>구구단</title>
 <meta charset="UTF-8">
+<style>
+body {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid;
+	margin: 0 auto;
+}
+
+th, td {
+	border: 1px solid;
+	padding: 10px;
+}
+</style>
 </head>
 <body>
-	<center>
-		<h1>구구단</h1>
-	</center>
-	<table border=1 align=center width=800 height=280>
+	<h1>구구단</h1>
+	<table>
 		<tr>
-
-			<script language="javascript">
-				
+			<script type="text/javascript">
+				for (var d = 2; d <= 9; d++) {
+					document.write("<th>" + d + "단" + "</th>");
+				}
 			</script>
-
+		</tr>
+		<tr>
+			<script type="text/javascript">
+				for (var d = 2; d <= 9; d++) {
+					document.write("<td>");
+					for (var n = 1; n <= 9; n++) {
+						document.write(d + " × " + n + " = " + (d * n) + "<br>");
+					}
+					document.write("</td>");
+				}
+			</script>
 		</tr>
 	</table>
 </body>
