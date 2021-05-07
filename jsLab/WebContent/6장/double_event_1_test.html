@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 이벤트 </title>
+<title>이벤트</title>
 <script type="text/javascript">
 //<![CDATA[
 window.onload=function(){
@@ -18,16 +18,14 @@ window.onload=function(){
     
 	 //파이어폭스, 크롬 등 브라우저에서 true를 반환하여 조건식을 만족함.
 	
-	
-	 //<button id="btn">인 요소를 클릭할 때 마다 함수 fnc1을 호출합니다.
-	
-	
-	 //<button id="btn">인 요소를 클릭할 때 마다 함수 fnc2를 호출합니다.
-	
-	
-		//IE(8 이하)에서만 실행
-	
-	
+	if (window.addEventListener) {
+//<button id="btn">인 요소를 클릭할 때 마다 함수 fnc1을 호출합니다.
+myBtn.addEventListener("click", fnc1, false);
+//<button id="btn">인 요소를 클릭할 때 마다 함수 fnc2를 호출합니다.
+myBtn.addEventListener("click", fnc2, false);
+} else { //IE(8 이하)에서만 실행
+myBtn.attachEvent("onclick", fnc1);
+myBtn.attachEvent("onclick", fnc2);
 	
 	
 	
@@ -35,7 +33,7 @@ window.onload=function(){
 //]]>
 </script>
 </head>
- <body>
-  <button id="btn">버튼</button>
- </body>
+<body>
+	<button id="btn">버튼</button>
+</body>
 </html>
