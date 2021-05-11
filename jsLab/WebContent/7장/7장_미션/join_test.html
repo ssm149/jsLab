@@ -19,108 +19,52 @@
 </style>
 
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-	$(document)
-			.ready(
-					function() {
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function () {
+		$("form").submit(function () {
+			var values = $("#jointable").find("[id]").not(":submit").not(":reset");
 
-						$("form")
-								.submit(
-										function() {
-											var tel1_pattern = /(^01[016789]$)/; //정규식
-											var getIntro = $("#intro").val()
-													.replace(/\s|/gi, '');
-											var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-											var getCheck = RegExp(/^[a-zA-Z0-9]{4,12}$/);
-											var getName = RegExp(/^[가-힣]+$/);
-											var fmt = RegExp(/^\d{6}[1234]\d{6}$/); //형식 설정
+			// 모든 입력란에 데이터가 입력되어야 함.
+			var isEmpty = false;
+			for (var i = 0; i < values.length; i++) {
+				if (isEmpty) {
+					alert("빈칸 없이 입력하세요.");
+					return false;
+				}
+				if (values[i].name == "gender")
+					isEmpty |= !(values[i].checked | values[++i].checked);
+				else
+					isEmpty |= !Boolean(values[i].value.trim());
+			}
 
-											if ($("#id").val() == "") {
-												alert("아이디를 꼭 입력하세요!");
-												$("#id").focus();
-												return false;
-											}
-											if (!getCheck.test($("#id").val())) {
-												alert("아이디 형식에 맞게 입력해주세요");
-												$("#id").val("");
-												$("#id").focus();
-												return false;
-											}
-											if ($("#pwd").val() == "") {
-												alert("비밀번호를 꼭 입력하세요!");
-												$("#pwd").focus();
-												return false;
-											}
-											if ($("#pwd").val() != $("#pwd2")
-													.val()) {
-												alert("비밀번호가 상이합니다");
-												$("#pwd2").val("");
-												$("#pwd2").focus();
-												return false;
-											}
-											if ($("#name").val() == "") {
-												alert("이름을 꼭 입력하세요!");
-												$("#name").focus();
-												return false;
-											}
-											if (!getName.test($("#name").val())) {
-												alert("이름형식에 맞게 입력해주세요")
-												$("#name").val("");
-												$("#name").focus();
-												return false;
-											}
-											if (!tel1_pattern.test($("#tel1")
-													.val())) {
-												(alert("010/011/016/017/018/019"));
-												$("#tel1").focus();
-												return false;
-											}
-											if ($("#tel1").val() == "") {
-												alert("010/011/016/017/018/019");
-												$("#tel1").focus();
-												return false;
-											}
-											if ($("#tel2").val().length != 4) {
-												(alert("전화번호를 입력하세요"));
-												$("#tel2").focus();
-												return false;
-											}
-											if ($("#tel3").val().length != 4) {
-												(alert("전화번호를 입력하세요"));
-												$("#tel3").focus();
-												return false;
-											}
-											if ($("#addr").val() == "") {
-												alert("주소를 꼭 입력하세요!");
-												$("#addr").focus();
-												return false;
-											}
-											if ($.trim($("#job").val()) == "") {
-												alert("직업을 선택하세요!");
-												$("#addr").focus();
-												return false;
-											}
-											if ($("#man").is(":checked") == false
-													&& ($("#woman").is(
-															":checked") == false)) {
-												alert("성별을 선택하세요!");
-												return false;
-											}
+			// 비밀번호와 비밀번호 확인이 일치하는지 검사.
+			if ($("#pwd").val() != $("#pwd2").val()) {
+				alert("비밀번호와 비밀번호확인이 일치하지 않습니다.");
+				$("#pwd").val("").focus();
+				$("#pwd2").val("");
+				return false;
+			}
 
-											if ($("#email").val() == "") {
-												alert("email주소를 입력하세요!");
-												return false;
-											}
+			// 전화번호의 첫째 자리는 010, 011, 016, 017, 018, 019만 가능함.
+			// 전화번호의 둘째/셋째 자리는 4자리수의 숫자만 가능함.
+			var tel1_pattern = /(^01[016789]$)/;
+			var tel2_pattern = /(^\d{4}$)/;
+			var tel3_pattern = tel2_pattern;
+			if (!(
+				tel1_pattern.test($("#tel1").val()) &&
+				tel2_pattern.test($("#tel2").val()) &&
+				tel3_pattern.test($("#tel3").val())
+			)) {
+				alert("올바른 전화번호를 입력하세요.");
+				return false;
+			}
 
-											if ($.trim($("#intro").val()) == "") {
-												alert("자기소개를 입력하세요!");
-												$("#addr").focus();
-												return false;
-											}
-
-										}); // submit() end
-
-					}); // ready() end
+			// 입력 완료시 "ok" 메시지를 출력함.
+			alert("ok");
+//			return false;
+		});
+	});
 </script>
 </head>
 
