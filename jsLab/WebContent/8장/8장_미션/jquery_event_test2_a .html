@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title> new document </title>
+<title>new document</title>
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
-//<![CDATA[
-$(function(){
+	//<![CDATA[
+	$(function() {
+		$("a").on("mouseover focus", function() {
+			$(this).css("background-color", "yellow");
+		});
+		$("a").on("mouseover blur", function() {
+			$(this).css("background-color", "red");
+		});
 
-});
-//]]>
+	});
+	//]]>
 </script>
 </head>
 <body>
- <a href="http://www.w3.org">버튼</a>
+	<a href="http://www.w3.org">버튼</a>
 </body>
 </html>
