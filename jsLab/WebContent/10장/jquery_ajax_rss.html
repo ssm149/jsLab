@@ -21,7 +21,7 @@ $(function(){
         success: function (data) { //성공적으로 요청했왔을 때...
         	//obj = JSONtoString(data);
             var obj = JSON.stringify(data);
-        	alert(obj);
+        	
         	
         	$("#news_list").empty(); //<ul>에 하위 요소를 모두 제거합니다.
            //console.log(data.responseData.feed.entries);
@@ -58,14 +58,14 @@ h1{font-size:2em;text-align:center;margin-bottom:10px;color:#c00;}
 
 /*탭 메뉴 디자인*/
 #news_wrap{width:380px;margin:0 auto;
-  background:#FFF url("images/rss_bg.gif") 0 0 repeat-x;}
+  background:#FFF url("img/rss_bg.gif") 25px 25px repeat-x;}
 
 #news_wrap li{height:25px;line-height:25px;position:relative;}
 #news_wrap span{position:absolute;top:0;right:3px;}
 #news_wrap li a{display:block;width:210px;
    white-space:nowrap;overflow:hidden;
    text-overflow:ellipsis;padding-left:15px;
-   background:url("images/bullet.gif") 5px 10px no-repeat;
+   background:url("img/bullet.gif") 5px 10px no-repeat;
 }
 #news_wrap h2{float:left;padding-right:3px;
 margin-bottom:10px;}

@@ -1,45 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
-<head>
-<title> RSS 연동하기 </title>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript">
-$(function(){
-//변수 g에 크로스 도메인의 데이터를 가져올 수 있도록 구글 주소를 저장하였습니다.
-  var g="https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&num=10&callback=?&q=";
-   
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-});
-</script>
-<style type="text/css">
+<head> <title> RSS 연동하기 </title> <meta http-equiv="content-type"
+	content="text/html;charset=utf-8" /> <script type="text/javascsript"
+	src="http://code.jquery.com/jquery-latest.js"></script> <script
+	type="text/javascript">
+		$(function() {
+			//변수 g에 크로스 도메인의 데이터를 가져올 수 있도록 구글 주소를 저장하였습니다.
+			var g = "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&num=10&callback=?&q=";
+
+		});
+	</script> <style type="text/css">
 /*기본 세팅*/
 *{margin:0;padding:0;}
 li{list-style:none;}
@@ -73,23 +43,9 @@ margin-bottom:10px;}
 }
 /*비활성화 탭 버튼 모양*/
 #news_wrap h2 a.on{background-color:#fff;font-weight:bold;}
-</style>
-</head>
-<body>
-<h1>조선닷컴</h1>
-<div id="news_wrap">
-  <h2> <!-- 초기에 첫 번째 버튼에만 class="on"이 포함되어 있습니다. -->
-    <a href="http://myhome.chosun.com/rss/www_section_rss.xml" class="on">
-  오늘의 주요뉴스</a>
-  </h2>
-  <h2>
-    <a href="http://www.chosun.com/site/data/rss/ent.xml">엔터테이먼트</a>
-  </h2>
-  <h2>
-    <a href="http://newsplus.chosun.com/hitdata/xml/se/sports/index.xml">스포츠</a>
-  </h2>
-  <ul id="news_list">
-  </ul>
-</div>
-</body>
-</html>
+</style> </head> <body> <h1>조선닷컴</h1> <div id="news_wrap"> <h2> <!-- 초기에 첫 번째 버튼에만 class="on"이 포함되어 있습니다. -->
+<a href="http://myhome.chosun.com/rss/www_section_rss.xml" class="on">
+오늘의 주요뉴스</a> </h2> <h2> <a
+	href="http://www.chosun.com/site/data/rss/ent.xml">엔터테이먼트</a> </h2> <h2>
+<a href="http://newsplus.chosun.com/hitdata/xml/se/sports/index.xml">스포츠</a>
+</h2> <ul id="news_list"> </ul> </div> </body> </html>
