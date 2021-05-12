@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE  |  </title>
+  <title>AdminLTE | 휴게소별 날씨정보</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -225,7 +225,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -335,8 +335,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="http://localhost:8081/js/AdminLTE-2.4.0-rc/pages/examples/%EC%A1%B0%EC%84%A0%EB%8B%B7%EC%BB%B4.html"><i class="fa fa-circle-o"></i> Chosun</a></li>
-         	<li><a href="pages/examples/gallery.html"><i class="fa fa-circle-o"></i> gallery</a></li>
+          
             <li><a href="invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
             <li><a href="profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
             <li><a href="login.html"><i class="fa fa-circle-o"></i> Login</a></li>
@@ -346,6 +345,7 @@
             <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
             <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
             <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li><a href="http://localhost:8081/js/AdminLTE-2.4.0-rc/pages/examples/%ED%9C%B4%EA%B2%8C%EC%86%8C.html"><i class="fa fa-circle-o"></i> 휴게소</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -398,13 +398,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        조선 닷컴 <br>
-        <small>Information is here</small>
+        휴게소 <br>
+        <small>Weather information</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="http://localhost:8081/js/AdminLTE-2.4.0-rc/index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Examples</a></li>
-        <li class="active">Chosun</li>
+        <li class="active">휴게소별 날씨정보</li>
       </ol>
     </section>
 
@@ -414,7 +414,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Chosun</h3>
+          <h3 class="box-title">휴게소별 날씨정보</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -463,7 +463,7 @@ $(function(){
               var m=date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
               var lk=d["link"];
               //앞서 구해온 데이터를 이용해 정보 목록 태그를 생성합니다.
-              $("#news_list").append('<li><a href="'+lk+'" target="_Chosun">'+
+              $("#news_list").append('<li><a href="'+lk+'" target="_blank">'+
               title+'</a> <span>'+m+'</span></li>');
            }); // “$.each” 메서드에 종료
         } // “success: function”에 종료
@@ -484,15 +484,15 @@ a{color:#333;text-decoration:none;outline:none;}
 h1{font-size:2em;margin-bottom:10px;color:black;}
 
 /*탭 메뉴 디자인*/
-#news_wrap{width:500px;margin:0 auto;
-  background:#FFF url("images/rss_bg.gif") 0 20px repeat-x;}
+#news_wrap{width:380px;margin:0 auto;
+  background:#FFF url("img/rss_bg.gif") 25px 25px repeat-x;}
 
 #news_wrap li{height:25px;line-height:25px;position:relative;}
 #news_wrap span{position:absolute;top:0;right:3px;}
 #news_wrap li a{display:block;width:210px;
    white-space:nowrap;overflow:hidden;
    text-overflow:ellipsis;padding-left:15px;
-   background:url("images/bullet.gif") 5px 10px no-repeat;
+   background:url("img/bullet.gif") 5px 10px no-repeat;
 }
 #news_wrap h2{float:left;padding-right:3px;
 margin-bottom:10px;}
@@ -513,19 +513,13 @@ margin-bottom:10px;}
 <h1></h1>
 <div id="news_wrap">
   <h2> <!-- 초기에 첫 번째 버튼에만 class="on"이 포함되어 있습니다. -->
-    <a href="http://myhome.Chosun.com/rss/www_section_rss.xml" class="on">
-  오늘의 주요뉴스</a>
+    <a href="http://data.ex.co.kr/openapi/restinfo/restWeatherList?key=test&type=xml&sdate=20210511&stdHour=10" class="on">
+  옥산 휴게소</a>
   </h2>
   <h2>
-    <a href="http://www.Chosun.com/site/data/rss/ent.xml">엔터테이먼트</a>
+    <a href="http://data.ex.co.kr/openapi/restinfo/restWeatherList?key=test&type=xml&sdate=20210511&stdHour=10">날씨</a>
   </h2>
-  <h2>
-    <a href="http://newsplus.Chosun.com/hitdata/xml/se/sports/index.xml">스포츠</a>
-  </h2>
-  <h2>
-    <a href="https://it.donga.com/feeds/rss/news/">동아뉴스</a>
-  </h2>
-   
+  
   <ul id="news_list">
   </ul>
 </div>
