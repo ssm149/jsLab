@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE | Dashboard</title>
+<title>AdminLTE 2 | Dashboard</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -55,7 +55,7 @@
 			<!-- Logo -->
 			<a href="index.html" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini"><b>A</b>LT</span> <!-- logo for regular state and mobile devices -->
-				<span class="logo-lg"><b>어드민</b>5G</span>
+				<span class="logo-lg"><b>어드민</b>엘티이</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top">
@@ -66,23 +66,6 @@
 
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
-						<li><div id="google_translate_element"></div></li>
-						<!-- 구글 세계 언어 선택 -->
-						<script type="text/javascript">
-							function googleTranslateElementInit() {
-								new google.translate.TranslateElement(
-										{
-											pageLanguage : 'ko',
-											includedLanguages : 'en,ja,ko,zh-CN',
-											layout : google.translate.TranslateElement.InlineLayout.SIMPLE
-										}, 'google_translate_element');
-							}
-						</script>
-						<script type="text/javascript"
-							src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
 						<!-- Messages: style can be found in dropdown.less-->
 						<li class="dropdown messages-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <i
@@ -280,20 +263,20 @@
 								<li class="user-body">
 									<div class="row">
 										<div class="col-xs-4 text-center">
-											<a href="./pages/examples/profile.html#">Followers</a>
+											<a href="#">Followers</a>
 										</div>
 										<div class="col-xs-4 text-center">
 											<a href="#">Sales</a>
 										</div>
 										<div class="col-xs-4 text-center">
-											<a href="./pages/examples/profile.html#">Friends</a>
+											<a href="#">Friends</a>
 										</div>
 									</div> <!-- /.row -->
 								</li>
 								<!-- Menu Footer-->
 								<li class="user-footer">
 									<div class="pull-left">
-										<a href="./pages/examples/profile.html"
+										<a href="./pages/examples/Profile.html"
 											class="btn btn-default btn-flat">Profile</a>
 									</div>
 									<div class="pull-right">
@@ -349,7 +332,7 @@
 						<ul class="treeview-menu">
 							<li class="active"><a href="index.html"><i
 									class="fa fa-circle-o"></i> Dashboard v1</a></li>
-							<li><a href="index.html"><i class="fa fa-circle-o"></i>
+							<li><a href="index2.html"><i class="fa fa-circle-o"></i>
 									Dashboard v2</a></li>
 						</ul></li>
 					<li class="treeview"><a href="#"> <i class="fa fa-files-o"></i>
@@ -452,14 +435,6 @@
 						</span>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="pages/examples/donga.html"><i
-									class="fa fa-circle-o"></i> 동아일보</a></li>
-							<li><a href="pages/examples/boardGeneral.html"><i
-									class="fa fa-circle-o"></i> 일반게시판</a></li>
-							<li><a href="pages/examples/chosun.html"><i
-									class="fa fa-circle-o"></i> Chosun</a></li>
-							<li><a href="pages/examples/gallery.html"><i
-									class="fa fa-circle-o"></i> Gallery</a></li>
 							<li><a href="pages/examples/invoice.html"><i
 									class="fa fa-circle-o"></i> Invoice</a></li>
 							<li><a href="pages/examples/profile.html"><i
@@ -478,7 +453,6 @@
 									class="fa fa-circle-o"></i> Blank Page</a></li>
 							<li><a href="pages/examples/pace.html"><i
 									class="fa fa-circle-o"></i> Pace Page</a></li>
-
 						</ul></li>
 					<li class="treeview"><a href="#"> <i class="fa fa-share"></i>
 							<span>Multilevel</span> <span class="pull-right-container">
@@ -533,7 +507,33 @@
 					<li class="active">Dashboard</li>
 				</ol>
 			</section>
-
+			<div id="visual">
+				<div id="mySwipe" class='swipe'>
+					<ul class="touch_banner swipe-wrap" style="text-align: center;">
+						<!-- 배너 목록 -->
+						<li><a href="#"><img src="images/visual_img_1.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="images/visual_img_2.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="images/visual_img_3.jpg" alt="" /></a></li>
+					</ul>
+				</div>
+				<ul class="touch_bullet">
+					<!-- 배너 위치 표시 -->
+					<li><img src="images/visual_bullet_on.png" class="active"
+						alt="" /></li>
+					<li><img src="images/visual_bullet_off.png" alt="" /></li>
+					<li><img src="images/visual_bullet_off.png" alt="" /></li>
+				</ul>
+				<p class="touch_left_btn">
+					<!-- 이전 버튼 -->
+					<a href="#"> <img src="images/visual_btn_left.png" alt="이전 배너" />
+					</a>
+				</p>
+				<p class="touch_right_btn">
+					<!-- 이전 버튼 -->
+					<a href="#"> <img src="images/visual_btn_right.png" alt="다음 배너" />
+					</a>
+				</p>
+			</div>
 			<!-- Main content -->
 			<section class="content">
 				<!-- Small boxes (Stat box) -->
@@ -1250,6 +1250,25 @@
 	</script>
 	<!-- Bootstrap 3.3.7 -->
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!-- 제이쿼리 라이이브러리 연동 -->
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- 터치 슬라이드 스타일(CSS) 연동 -->
+	<script type="text/javascript" src="js/swipe.js"></script>
+	<!-- 터치 슬라이드 플러그인 연동 -->
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<!-- bxSlider 플러그인 연동 -->
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<!-- UI 플러그인 연동 -->
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<!-- 쿠키 플러그인 연동 -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>	
+	
 	<!-- Morris.js charts -->
 	<script src="bower_components/raphael/raphael.min.js"></script>
 	<script src="bower_components/morris.js/morris.min.js"></script>
@@ -1282,5 +1301,8 @@
 	<script src="dist/js/pages/dashboard.js"></script>
 	<!-- AdminLTE for demo purposes -->
 	<script src="dist/js/demo.js"></script>
+	
+	
+	
 </body>
 </html>

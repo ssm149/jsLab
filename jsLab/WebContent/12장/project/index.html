@@ -7,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이이브러리 연동 -->
-
 <link rel="stylesheet" type="text/css" href="js/style.css" /><!-- 터치 슬라이드 스타일(CSS) 연동 -->
 <script type="text/javascript" src="js/swipe.js"></script> <!-- 터치 슬라이드 플러그인 연동 -->
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
@@ -23,6 +22,32 @@ function googleTranslateElementInit() {
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
+<hr />
+<div id="visual">
+ <div id="mySwipe"  class='swipe'>
+    <ul class="touch_banner swipe-wrap"> <!-- 배너 목록 -->
+      <li><a href="#"><img src="images/visual_img_1.jpg" alt="" /></a></li>
+      <li><a href="#"><img src="images/visual_img_2.jpg" alt="" /></a></li>
+      <li><a href="#"><img src="images/visual_img_3.jpg" alt="" /></a></li>
+   </ul>
+  </div>
+  <ul class="touch_bullet"> <!-- 배너 위치 표시 -->
+     <li><img src="images/visual_bullet_on.png" class="active" alt="" /></li>
+     <li><img src="images/visual_bullet_off.png" alt="" /></li>
+     <li><img src="images/visual_bullet_off.png" alt="" /></li>
+  </ul>
+  <p class="touch_left_btn"> <!-- 이전 버튼 -->
+     <a href="#">
+     <img src="images/visual_btn_left.png" alt="이전 배너" />
+     </a>
+  </p>
+  <p class="touch_right_btn"> <!-- 이전 버튼 -->
+     <a href="#">
+     <img src="images/visual_btn_right.png" alt="다음 배너" />
+     </a>
+  </p>
+</div>
+<hr />
 <body>
 <div id="wrap">
 <dl class="hide">

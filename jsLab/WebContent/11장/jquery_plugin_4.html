@@ -6,7 +6,7 @@
 <meta name='viewport'
 	content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 <style type="text/css">
-/* Swipe ÇÃ·¯±×ÀÎ »ç¿ëÀ» À§ÇØ ÇÊ¿äÇÑ ½ºÅ¸ÀÏ(CSS) */
+/* Swipe ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½(CSS) */
 .swipe {
 	overflow: hidden;
 	visibility: hidden;
@@ -24,7 +24,7 @@
 	position: relative;
 }
 
-/* Á÷Á¢ Ãß°¡ÇÑ ½ºÅ¸ÀÏ(CSS) */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½(CSS) */
 li {
 	list-style: none;
 }
@@ -50,23 +50,23 @@ img {
 <script type="text/javascript">
 	$(function() {
 		window.mySwipe = $('#mySwipe').Swipe({
-			startSlide : 0, //ÃÊ±â¿¡ Ã¹ ¹øÂ° ¹è³Ê°¡ ³ëÃâµË´Ï´Ù.
-			auto : 3000, //3ÃÊ ÀÌÈÄ ÀÚµ¿À¸·Î ¹è³Ê°¡ ÀÌµ¿µË´Ï´Ù.
-			continuous : true, //¹è³Ê°¡ ¹Ýº¹µÇ¾î ·Ñ¸µµË´Ï´Ù.
-			disableScroll : true, //½½¶óÀÌµå ¹è³Ê¿¡ ½ºÅ©·Ñ¹Ù »ý¼ºÀ» Â÷´Ü½ÃÅµ´Ï´Ù.
-			stopPropagation : true, //ÇÏÀ§ ¿ä¼Ò¿¡ ÀÌº¥Æ® Àü´ÞÀ» Â÷´ÜÇÕ´Ï´Ù.
+			startSlide : 0, //ï¿½Ê±â¿¡ Ã¹ ï¿½ï¿½Â° ï¿½ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½Ë´Ï´ï¿½.
+			auto : 3000, //3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê°ï¿½ ï¿½Ìµï¿½ï¿½Ë´Ï´ï¿½.
+			continuous : true, //ï¿½ï¿½Ê°ï¿½ ï¿½Ýºï¿½ï¿½Ç¾ï¿½ ï¿½Ñ¸ï¿½ï¿½Ë´Ï´ï¿½.
+			disableScroll : true, //ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½Å©ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü½ï¿½Åµï¿½Ï´ï¿½.
+			stopPropagation : true, //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¿ï¿½ ï¿½Ìºï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 			callback : function(index, element) {
-			}, //ÀÌº¥Æ®°¡ ¿Ï·áµÇ¸é ÄÝ¹éÇÔ¼ö¸¦ ½ÇÇàÇÔ.
+			}, //ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½Ï·ï¿½Ç¸ï¿½ ï¿½Ý¹ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 			transitionEnd : function(index, element) {
-			} //È­¸éÀÌ ÀüÈ¯µÇ¸é ÀÍ¸íÇÔ¼ö ½ÇÇàÇÔ.
+			} //È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ç¸ï¿½ ï¿½Í¸ï¿½ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 		}).data('Swipe');
 
-		$(".prevBtn").on("click", function() {//ÀÌÀü ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§...
-			mySwipe.prev(); //ÀÌÀü ¹è³Ê·Î ÀÌµ¿ÇÕ´Ï´Ù.
+		$(".prevBtn").on("click", function() {//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½...
+			mySwipe.prev(); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê·ï¿½ ï¿½Ìµï¿½ï¿½Õ´Ï´ï¿½.
 		});
 
-		$(".nextBtn").on("click", function() {//´ÙÀ½ ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§...
-			mySwipe.next(); //´ÙÀ½ ¹è³Ê·Î ÀÌµ¿ÇÕ´Ï´Ù.
+		$(".nextBtn").on("click", function() {//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½...
+			mySwipe.next(); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê·ï¿½ ï¿½Ìµï¿½ï¿½Õ´Ï´ï¿½.
 		});
 	});
 </script>
@@ -75,10 +75,10 @@ img {
 	<h1>Swipe 2</h1>
 	<div id='mySwipe' class='swipe'>
 		<ul class='swipe-wrap'>
-			<li><img src="images/pic_1.jpg" alt="»çÁø1" /></li>
-			<li><img src="images/pic_2.jpg" alt="»çÁø2" /></li>
-			<li><img src="images/pic_3.jpg" alt="»çÁø3" /></li>
-			<li><img src="images/pic_4.jpg" alt="»çÁø4" /></li>
+			<li><img src="images/pic_1.jpg" alt="ï¿½ï¿½ï¿½ï¿½1" /></li>
+			<li><img src="images/pic_2.jpg" alt="ï¿½ï¿½ï¿½ï¿½2" /></li>
+			<li><img src="images/pic_3.jpg" alt="ï¿½ï¿½ï¿½ï¿½3" /></li>
+			<li><img src="images/pic_4.jpg" alt="ï¿½ï¿½ï¿½ï¿½4" /></li>
 		</ul>
 	</div>
 	<div class="btn_wrap">
