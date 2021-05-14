@@ -1,5 +1,5 @@
-#visual{height:263px;position:relative;}
-.touch_bullet{position:absolute;top:230px;left:50%;margin-left:-27px;}
+#visual{height:auto;position:relative;}
+.touch_bullet{position:absolute;bottom:10px;left:50%;margin-left:-27px;}
 .touch_bullet li{float:left;}
 .touch_left_btn{position:absolute;top:50%;left:30px;margin-top:-25px;}
 .touch_right_btn{position:absolute;top:50%;right:30px;margin-top:-25px;}
@@ -125,4 +125,4 @@
 }
 
 /* END required styles */
-#mySwipe img{width:100%; max-width:100%;}
+#mySwipe img{width:70%; max-width:100%;}
